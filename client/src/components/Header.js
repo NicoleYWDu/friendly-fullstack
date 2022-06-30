@@ -36,6 +36,7 @@ class Header extends Component {
           <Link
             to={this.props.auth ? "/surveys" : "/"}
             className="left brand-logo"
+            style={{ margin: "0 15px" }}
           >
             Friendly
           </Link>
@@ -48,8 +49,8 @@ class Header extends Component {
   }
 }
 
-function matStateToProps({ auth }) {
+function mapStateToProps({ auth }) {
   return { auth };
 }
 
-export default connect(matStateToProps)(Header);
+export default connect(mapStateToProps)(Header);
